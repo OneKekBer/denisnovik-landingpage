@@ -1,0 +1,261 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('/fonts/Gilroy-ExtraBold.woff2') format('woff2'),
+        url('/fonts/Gilroy-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+body{
+    
+    margin: 0;
+    padding: 0;
+    font-size: var(--small_text);
+    font-weight: bold;
+    
+}
+:root{
+    --small_text:25px;
+    --medium_text:34px;
+    --large_text:54px;
+
+}
+h1{
+    font-size: var(--large_text);
+    
+}
+h2{
+    font-size: var(--medium_text);
+}
+.main{
+    font-family: 'Gilroy',sans-serif ;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0 90px 0;
+    text-align: center;
+    font-family: 'Gilroy',sans-serif ;
+    
+    
+}
+.block-1{
+    justify-content: end;
+}
+.block-2{
+    justify-content: center;
+}
+.burger{
+    
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    padding: 20px;
+
+    display: none;
+
+    z-index: 20;
+    position: absolute;
+    top:0;
+    right: 0;
+
+}
+.close{
+    width: 30px;
+    height: 30px;
+    padding: 20px;
+
+    display: none;
+    z-index: 20;
+    position: absolute;
+    top:0;
+    right: 0;
+}
+.menu__list{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    
+}
+.menu__item{
+    font-size: 30px;
+    font-weight:bold;
+    cursor: pointer;
+    margin-bottom: 30px;
+    
+
+    color:grey
+}
+.menu__item:first-child{
+    color:black
+}
+
+.menu{
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color:#F6F6F6;
+    display: none;
+
+    position: absolute;
+    top: 0;
+
+}
+.active{
+    display: flex;
+}
+
+.header .container{
+    width: 60%;
+    height: 100px;
+    border-bottom: 1px solid black;
+    justify-content: center;
+
+}
+.header__list{
+    display: flex;
+    flex-direction: row;
+    
+
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.header__item{
+    font-size: var(--small_text);
+    font-weight:bold;
+    cursor: pointer;
+
+
+}
+
+.hero__block{
+    display: flex;
+    align-items: center;
+}
+.rot{
+    transform:rotate(0.75turn)
+}
+
+
+.hero__img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.hero__text{
+    display: flex;
+    justify-content: space-around;
+}
+.aboutMe{
+    width: 100%;
+    min-height: 600px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #F6F6F6;
+}
+.aboutMe__text{
+    text-align: center;
+}
+
+.skills__text-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 90px;
+}
+.skills__block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.portfolio__block h3{
+    text-decoration: underline;
+}
+.portfolio__block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    
+}
+.portfolio{
+    background-color: #F6F6F6;
+    
+}
+.footer{
+    
+    
+}
+.footer__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    
+    
+}
+.btn{
+    font-family: 'Gilroy',sans-serif ;
+    background-color: black;
+    color:white;
+    border-radius: 32px;
+    width: 200px;
+    height: 50px;
+    border: none;
+}
+.btn:hover{
+    background-color: grey;
+}
+.btn:active{
+    background-color: lightgrey;
+}
+.footer__block-container{
+    
+    margin: 20px 0 20px 0 ;
+    display: flex;
+   
+    padding: 0 10px 0 10px;
+}
+.footer__block-container p {
+    text-align: center;
+}
+
+@media (max-width:1000px) {
+    .rot{
+        transform: none;
+        
+    }
+}
+@media (max-width:576px) {
+    :root{
+
+    }
+    .rot{
+        transform: none;
+        display: none;
+    }
+    .header__list{
+        display: none;
+    }
+    .header .container{
+        display: none;
+        border: none;
+    }
+    .burger{
+        display: block;
+    }
+    .skills__block{
+        margin: 40px 0 40px 0;
+    }
+}
